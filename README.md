@@ -1,6 +1,10 @@
 # Sislógica — Landing Page
 
+<<<<<<< HEAD
 Landing page institucional da **Sislógica**. O site apresenta os serviços, diferenciais e canais de contato da empresa com uma interface moderna, responsiva e com suporte a tema claro/escuro.
+=======
+Landing page institucional da **Sislógica**, empresa especializada em soluções logísticas corporativas. O site apresenta os serviços, diferenciais e canais de contato da empresa com uma interface moderna, responsiva e com suporte a tema claro/escuro.
+>>>>>>> 2ac2054 (Correção de bugs visuais nos cards de serviço)
 
 ## Conteúdo
 

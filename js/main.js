@@ -52,7 +52,7 @@ const servicosData = [
   { title: 'APP TMS Drivers', desc: 'Aplicativo mobile exclusivo para motoristas. Consulte rotas, registre entregas, envie comprovantes, receba notificações e mantenha comunicação direta com a central. Tudo na palma da mão.', img: 'assets/APP_card.png' },
   { title: 'Monetização de motoristas', desc: 'Plataforma que conecta motoristas agregados a fretes disponíveis. Maximize o aproveitamento da frota e gere novas receitas conectando oferta e demanda de transporte de forma inteligente.', img: 'assets/MONETIZACAO_card.png' },
   { title: 'Emissão de NF-e, CT-e e MDF-e', desc: 'Emissão eletrônica de documentos fiscais totalmente integrada ao TMS. Gere NF-e, CT-e e MDF-e com validação automática, reduzindo erros e agilizando a sua operação fiscal.', img: 'assets/NFe_card.png' },
-  { title: 'Dashboards de Controle', desc: 'Painéis gerenciais com indicadores em tempo real: entregas realizadas, taxas de sucesso, desempenho por motorista, custos operacionais e muito mais. Tome decisões estratégicas com dados precisos.', img: 'assets/TMS_card.png' },
+  { title: 'Dashboards de Controle', desc: 'Painéis gerenciais com indicadores em tempo real: entregas realizadas, taxas de sucesso, desempenho por motorista, custos operacionais e muito mais. Tome decisões estratégicas com dados precisos.' },
   { title: 'Controle de Tracking', desc: 'Rastreamento detalhado de todas as entregas com atualizações em tempo real. Saiba exatamente onde cada carga está, receba notificações de etapas concluídas e mantenha seus clientes informados.', img: 'assets/TRACKING_card.png' }
 ];
 
@@ -63,15 +63,15 @@ function renderServicoModal() {
   const iconDiv = document.getElementById('servicoModalIcon');
   const iconImg = document.getElementById('servicoModalIconImg');
   iconDiv.className = 'servico-modal-icon';
-  iconDiv.style.backgroundImage = '';
+  iconImg.className = '';
   iconImg.style.display = '';
+  iconImg.src = 'assets/icons/checklist.svg';
   if (data.iconClass) {
     iconDiv.classList.add(data.iconClass);
     iconImg.style.display = 'none';
   } else if (data.img) {
-    iconDiv.classList.add('hero-bg');
-    iconDiv.style.backgroundImage = "url('" + data.img + "')";
-    iconImg.style.display = 'none';
+    iconImg.classList.add('hero-img');
+    iconImg.src = data.img;
   }
   document.getElementById('servicoModalTitle').textContent = data.title;
   document.getElementById('servicoModalDesc').textContent = data.desc;
