@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sislógica - Soluções Logísticas</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logo_minimalista_ultra_white.svg?v=2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ============ HOME / HERO ============ -->
+    <section id="home" class="section hero">
+      <div class="hero-bg">
+        <img src="assets/imgs/background-hero-newLogo-oldtypo.png" alt="" class="hero-bg-img" />
+      </div>
+
+      <nav class="navbar">
+        <div class="nav-logo">
+          <img src="assets/logo_minimalista_branca.svg" alt="Sislógica" class="logo-img" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sisedi">SISEDI</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contato">Contatos</a></li>
+        </ul>
+        <div class="switch-theme" id="switchTheme">
+          <div class="switch-track">
+            <div class="switch-thumb"></div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-title">
+          <h1 class="hero-sislogica"><span class="sis">SIS</span>LOGICA</h1>
+          <span class="hero-subtitle">soluções<br />logísticas</span>
+        </div>
+        <p class="hero-tagline">Soluções corporativas sob medida<br />para o seu negócio</p>
+      </div>
+
+      <div class="scroll-indicator" onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'})">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section id="servicos" class="section servicos">
+      <div class="container">
+        <h2 class="section-title">Serviços</h2>
+
+        <div class="servicos-wrapper">
+          <div class="servico-principal">
+            <h3 class="servico-nome">TMS</h3>
+            <p class="servico-desc">
+              Costumamos dizer que o nosso <em>Sistema de Gerenciamento de Transportes</em> é um sistema modular, pois é formado por <em>diversas funcionalidades</em> que podem ser usadas em conjunto ou separadas levando em consideração a necessidade de cada cliente.
+            </p>
+            <a href="#contato" class="btn-contato">Entre em contato</a>
+          </div>
+
+          <div class="servicos-grid">
+            <div class="servicos-row">
+              <div class="servico-item" onclick="openServicoModal('Roteirizador')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Roteirizador</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('First, Middle e Last Mile')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>First, Middle e Last Mile</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('Ferramenta WhatsApp')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Ferramenta WhatsApp</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('Controle de Indenização')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Controle de Indenização</span>
+              </div>
+            </div>
+            <div class="servicos-row">
+              <div class="servico-item" onclick="openServicoModal('Módulo de SAC')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Módulo de SAC</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('APP TMS Drivers')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>APP TMS Drivers</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('Monetização de motoristas')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Monetização de motoristas</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('Emissão de NF-e, CT-e e MDF-e')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Emissão de NF-e, CT-e e MDF-e</span>
+              </div>
+            </div>
+            <div class="servicos-row">
+              <div class="servico-item" onclick="openServicoModal('Dashboards de Controle')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Dashboards de Controle</span>
+              </div>
+              <div class="servico-item" onclick="openServicoModal('Controle de Tracking')">
+                <img src="assets/icons/checklist.svg" alt="" class="item-icon" />
+                <span>Controle de tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" onclick="document.getElementById('sisedi').scrollIntoView({behavior:'smooth'})">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============ SISEDI ============ -->
+    <section id="sisedi" class="section sisedi">
+      <div class="container">
+        <h2 class="section-title">SISEDI</h2>
+        <p class="sisedi-intro">Ferramenta de MiddleWare usada para integração de informações, utilizando-se de todas as tecnologias disponíveis ou conhecidas, seja por API, Web Service, FTP, SFTP e outros.</p>
+
+        <div class="sisedi-collapse">
+          <div class="sisedi-item">
+            <button class="sisedi-toggle" onclick="toggleSisedi(this)">
+              <span class="sisedi-number">1.</span>
+              Não possuo nenhum modo de integração. Qual a Solução?
+              <svg class="sisedi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="sisedi-body">
+              <p>Caso nosso cliente não possua nenhum modo de integração, nós realizamos uma configuração para que seja feita a importação dos pedidos via planilha.</p>
+            </div>
+          </div>
+          <div class="sisedi-item">
+            <button class="sisedi-toggle" onclick="toggleSisedi(this)">
+              <span class="sisedi-number">2.</span>
+              Possuo apenas acesso as notas do meu embarcador. Como integrar os pedidos?
+              <svg class="sisedi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="sisedi-body">
+              <p>Caso nosso cliente tenha acesso as notas dos pedidos, nós temos uma integração com a Receita Federal, onde fazemos uma configuração para que possamos capturar as notas fiscais e realizarmos as importações dos pedidos.</p>
+            </div>
+          </div>
+          <div class="sisedi-item">
+            <button class="sisedi-toggle" onclick="toggleSisedi(this)">
+              <span class="sisedi-number">3.</span>
+              Possuo um arquivo Notfis e nada mais. Há alguma Solução?
+              <svg class="sisedi-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="sisedi-body">
+              <p>Em um cenário em que nosso cliente possua arquivos Notfis, nós solicitamos um modelo para que possamos configurar o sistema, de uma forma que o cliente consiga subir o arquivo na plataforma e importar os pedidos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============ QUEM SOMOS ============ -->
+    <section id="sobre" class="section sobre">
+      <div class="container">
+        <h2 class="section-title">QUEM SOMOS</h2>
+
+        <div class="sobre-layout">
+          <div>
+            <p class="sobre-desc">
+              A Sislógica é uma empresa jovem, que nasceu da necessidade na área de logística e entregas. Temos um capital humano e tecnológico, com foco no desenvolvimento de sistemas sob medida. Atuamos nas áreas de logística. Operamos com logística reversa, entregas <strong>First Mile</strong> e <strong>Last Mile</strong>, gerenciamento de cargas, entre outros.
+            </p>
+
+            <ul class="sobre-diferenciais">
+              <li>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="#5254af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                Empresa desenvolvedora de soluções corporativas.
+              </li>
+              <li>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="#5254af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                Comprometimento com prazos definidos.
+              </li>
+              <li>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="#5254af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                Segurança robusta para a proteção dos seus dados.
+              </li>
+            </ul>
+          </div>
+
+          <div class="sobre-cards">
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/icons/pessoa.svg" alt="Equipe" class="card-icon" />
+                <h4>Equipe</h4>
+              </div>
+              <p>Nossa equipe possui uma vasta experiência técnica. São mais de 20 anos de know how em desenvolvimento. Nosso foco é oferecer ao cliente a melhor solução.</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/icons/mundo.svg" alt="Missão" class="card-icon" />
+                <h4>Missão</h4>
+              </div>
+              <p>Superar as expectativas dos clientes com soluções inteligentes, utilizando tecnologia e pessoas com total comprometimento.</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/icons/diamante.svg" alt="Valores" class="card-icon" />
+                <h4>Valores</h4>
+              </div>
+              <p>Compromisso com a excelência, transparência nas relações e foco em resultados que geram valor real para nossos clientes e parceiros.</p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <img src="assets/icons/nuvem.svg" alt="Infraestrutura" class="card-icon" />
+                <h4>Infraestrutura</h4>
+              </div>
+              <p>Temos uma estrutura robusta com servidores de alta performance e disponibilidade, todos alocados na AWS cloud, garantindo segurança e privacidade dos dados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" onclick="document.getElementById('clientes').scrollIntoView({behavior:'smooth'})">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTES ============ -->
+    <section id="clientes" class="section clientes">
+      <div class="container">
+        <h2 class="section-title">CLIENTES</h2>
+
+        <div class="clientes-grid">
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/AC2-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/airlab-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/alibaba-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/cainiao-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/easycargo-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/entregaja-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/enviabybus-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/feTransportes-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/madouBemLog-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/newpost-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/ontime-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/petlove-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/r2pp-logo 1.svg')"></div>
+          <div class="cliente-logo" style="background-image:url('assets/logos-vectors/rodoflip-logo 1.svg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO + FOOTER ============ -->
+    <section id="contato" class="contato">
+      <div class="container contato-inner">
+        <div class="contato-info">
+          <h2 class="contato-title">CONTATO</h2>
+
+          <a href="https://wa.me/5511945802328" target="_blank" class="contato-whatsapp">
+            <div class="contato-item">
+              <svg class="contato-icon" viewBox="0 0 24 24" fill="none" stroke="#d3d3d3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span class="contato-text">+ 55 11 94580-2328</span>
+            </div>
+          </a>
+
+          <div class="contato-item">
+            <svg class="contato-icon" viewBox="0 0 24 24" fill="none" stroke="#393B7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span class="contato-text">Av.Sagitário, 138, Torre: London - 1608, Barueri - SP, 06473-073</span>
+          </div>
+
+          <div class="contato-item">
+            <svg class="contato-icon" viewBox="0 0 24 24" fill="none" stroke="#393B7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span class="contato-text">suporte@sislogica.com.br</span>
+          </div>
+
+          <div class="contato-brand">
+            <img src="assets/logo_minimalista_branca.svg" alt="Sislógica" class="contato-logo" id="contatoLogo" />
+            <div class="contato-brand-text">
+              <span class="contato-sislogica">SISLOGICA</span>
+              <span class="contato-subtitle">soluções<br />logísticas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-mapa">
+          <div class="mapa-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.3532106039024!2d-46.86182818893496!3d-23.483783978765004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03ad5895b701%3A0xe1d06e614ed5bf9!2sAv.%20Sagit%C3%A1rio%2C%20138%20-%20Alphaville%20Conde%20II%2C%20Barueri%20-%20SP%2C%2006473-073!5e0!3m2!1spt-BR!2sbr!4v1778870078116!5m2!1spt-BR!2sbr"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Modal de Serviços -->
+  <div id="servicoModal" class="servico-modal-overlay" onclick="closeServicoModal(event)">
+    <div class="servico-modal">
+      <button class="servico-modal-close" onclick="closeServicoModal()">&times;</button>
+      <div class="servico-modal-icon" id="servicoModalIcon">
+        <img src="assets/icons/checklist.svg" alt="" id="servicoModalIconImg" />
+      </div>
+      <div class="servico-modal-header">
+        <button class="servico-modal-arrow" onclick="navigateServico(-1)" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h3 class="servico-modal-title" id="servicoModalTitle"></h3>
+        <button class="servico-modal-arrow" onclick="navigateServico(1)" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <p class="servico-modal-desc" id="servicoModalDesc"></p>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" aria-label="Voltar ao topo">
+    <img src="assets/icons/white-arrow.svg" alt="" />
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
