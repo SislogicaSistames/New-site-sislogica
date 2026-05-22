@@ -42,6 +42,22 @@ if (switchTheme) {
   });
 }
 
+// Hamburger menu toggle
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.querySelector('.nav-menu');
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      hamburgerBtn.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+}
+
 // Modal de serviços
 const servicosData = [
   { title: 'Roteirizador', desc: 'O Roteirizador da Sislógica otimiza as rotas de entrega da sua frota, reduzindo custos operacionais e tempo de deslocamento. Com inteligência geoespacial, calcula a melhor sequência de paradas considerando distância, trânsito e janelas de horário. Ideal para entregas First, Middle e Last Mile.', img: 'assets/ROTEIRIZADOR_card.png' },
